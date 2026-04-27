@@ -17,7 +17,9 @@ async fn async_main() -> anyhow::Result<()> {
 
     let listener = TcpListener::bind(&cfg.web_addr).await?;
 
-    let state = AppState::new_arc(cfg);
+    let pool = init::datbase(&cfg.database_url, cfg.database_max_conns).await?;
+
+    let state = AppState::new_arc(cfg, pool);
 
     let app = init::router(state);
 

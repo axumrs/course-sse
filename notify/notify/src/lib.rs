@@ -2,6 +2,7 @@ pub mod config;
 mod err;
 pub mod handler;
 pub mod init;
+pub mod model;
 mod state;
 
 pub use err::*;
