@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SSE：服务器推送时间</title>
+  </head>
+
+  <body>
+    <h1>SSE：服务器推送时间</h1>
+    <textarea
+      id="data"
+      style="width: 36rem; height: 18rem; font-size: larger"
+    ></textarea>
+    <script>
+      const eventSource = new EventSource("/api/sse");
+      eventSource.onmessage = (event) => {
+        console.log(event.data);
+        document.getElementById("data").value =
+          new Date(event.data).toLocaleString() +
+          "\n" +
+          document.getElementById("data").value;
+      };
+    </script>
+  </body>
+</html>
