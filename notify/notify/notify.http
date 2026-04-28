@@ -1,0 +1,13 @@
+@host = 172.29.101.146:9527
+
+### 所有通知
+POST http://{host}/api/notify HTTP/1.1
+Content-Type: application/json
+
+{
+    "page":0
+}
+
+### 通知详情
+GET http://{host}/api/notify/d7o1me8hmvamqlh62400 HTTP/1.1
+Content-Type: application/json

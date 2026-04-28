@@ -5,8 +5,17 @@ pub enum Error {
     #[error("数据库错误")]
     Database(#[from] sqlx::Error),
 
+    #[error("{0}")]
+    NotFound(String),
+
     #[error(transparent)]
     Other(#[from] anyhow::Error),
+}
+
+impl Error {
+    pub fn not_found(msg: impl Into<String>) -> Self {
+        Self::NotFound(msg.into())
+    }
 }
 
 impl IntoResponse for Error {
