@@ -18,7 +18,8 @@ pub async fn find(
     Ok(Json(m))
 }
 
-#[derive(serde::Deserialize)]
+#[derive(serde::Deserialize, Default)]
+#[serde(default)]
 pub struct ListPayload {
     pub page: Option<i32>,
     pub page_size: Option<i32>,
