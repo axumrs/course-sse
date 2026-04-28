@@ -1,4 +1,4 @@
-type Notification = {
+type NotificationModel = {
   id: string;
   title: string;
   content: string;

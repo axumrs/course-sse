@@ -7,7 +7,7 @@ export default function NotifyDetail({
   n,
   showContent,
 }: {
-  n: Notification;
+  n: NotificationModel;
   showContent?: boolean;
 }) {
   return (

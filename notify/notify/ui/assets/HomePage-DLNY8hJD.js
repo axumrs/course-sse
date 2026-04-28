@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-ByY1xr43.js";import{t}from"./createLucideIcon-DkK3b-RX.js";var n=t(`corner-right-up`,[[`path`,{d:`m10 9 5-5 5 5`,key:`9ctzwi`}],[`path`,{d:`M4 20h7a4 4 0 0 0 4-4V4`,key:`1plgdj`}]]),r=e();function i(){return(0,r.jsxs)(`div`,{className:`flex justify-end items-center gap-x-3`,children:[`当有新通知时，这个小铃铛将会标红`,(0,r.jsx)(n,{})]})}export{i as default};

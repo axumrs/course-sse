@@ -9,6 +9,7 @@ pub fn init(state: ArcAppState) -> Router {
     Router::new()
         .nest("/sse", sse_init(state.clone()))
         .nest("/api", api_init(state))
+        .fallback(handler::static_handler)
 }
 
 fn sse_init(state: ArcAppState) -> Router {

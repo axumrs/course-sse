@@ -1,3 +1,4 @@
+pub mod asset;
 pub mod config;
 mod err;
 pub mod handler;

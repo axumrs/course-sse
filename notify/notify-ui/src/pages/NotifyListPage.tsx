@@ -13,7 +13,7 @@ export default function NotifyListPage() {
         body: JSON.stringify({}),
       })
         .then((res) => res.json())
-        .then((data) => data as Pagination<Notification>),
+        .then((data) => data as Pagination<NotificationModel>),
   });
 
   const notifications = useMemo(

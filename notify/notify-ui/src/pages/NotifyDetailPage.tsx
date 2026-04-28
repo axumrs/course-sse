@@ -17,7 +17,7 @@ export default function NotifyDetailPage() {
         method: "GET",
       })
         .then((resp) => resp.json())
-        .then((data) => data as Notification),
+        .then((data) => data as NotificationModel),
   });
 
   const { mutate: markReadMutation } = useMutation({
